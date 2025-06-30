@@ -16,9 +16,9 @@ namespace OP;
 
 //	...
 require_once(_ROOT_CORE_.'/function/RootPath.php');
-
-//	...
 RootPath('git'  , _ROOT_GIT_  );
+RootPath('doc'  , _ROOT_DOC_  );
 RootPath('app'  , _ROOT_APP_  );
-RootPath('core' , _ROOT_CORE_ );
 RootPath('asset', _ROOT_ASSET_);
+RootPath('core' , _ROOT_CORE_ );
+RootPath('unit' , _ROOT_ASSET_.'unit');
