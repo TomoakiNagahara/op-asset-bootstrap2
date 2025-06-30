@@ -50,6 +50,6 @@ try {
 	unset($file);
 
 } catch ( \Throwable $e ){
-	echo $e->getMessage();
+	echo 'Bootstrap: ' . $e->getMessage();
 	exit(__LINE__);
 }
