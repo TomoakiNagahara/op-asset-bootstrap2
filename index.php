@@ -21,7 +21,7 @@ try {
 		'config/op.php',
 		'config/php.php',
 		'bootstrap/include/root.php',
-		'bootstrap/include/config.php',
+		'bootstrap/include/admin.php',
 		'bootstrap/include/rewrite.php',
 		'bootstrap/include/session.php',
 	] as $file){
