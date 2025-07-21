@@ -22,7 +22,13 @@ namespace OP;
 	<body>
 		<header></header>
 		<main>
-			<?php include($path) ?>
+			<?php
+			if( file_exists($path) ){
+				include($path);
+			}else{
+				echo "Does not found this file: {$path}";
+			}
+			?>
 		</main>
 		<footer></footer>
 	</body>
