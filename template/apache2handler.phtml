@@ -16,7 +16,8 @@ namespace OP;
 //	Calc rewrite base.
 $rewrite_base = str_replace($_SERVER['DOCUMENT_ROOT'], '/', $_SERVER['SCRIPT_FILENAME']);
 $rewrite_base = dirname($rewrite_base);
-$rewrite_base = '/'.trim($rewrite_base,'/').'/';
+$rewrite_base = trim($rewrite_base,'/');
+$rewrite_base = $rewrite_base ? "/{$rewrite_base }/": '/';
 
 ?>
 <h1>Bootstrap: <?= PHP_SAPI ?></h1>
