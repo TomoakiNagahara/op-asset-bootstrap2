@@ -14,10 +14,17 @@
 namespace OP;
 
 /* @var $path string */
+OP()->Unit()->WebPack()->Auto('asset:/webpack/css/color.css');
+OP()->Unit()->WebPack()->Auto('asset:/webpack/css/code.css');
 
 ?>
 <html>
 	<head>
+	<!-- Style -->
+	<style><?php OP()->Unit()->WebPack()->Output('css') ?></style>
+
+	<!-- Title -->
+	<title>ONEPIECE Framework</title>
 	</head>
 	<body>
 		<header></header>
