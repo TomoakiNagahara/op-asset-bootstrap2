@@ -15,7 +15,7 @@ namespace OP;
 
 //	...
 if( OP::isCI() ){
-	return;
+//	return;
 }
 
 //	...
