@@ -13,6 +13,10 @@
  */
 namespace OP;
 
-?>
-<h1>Does not set Admin IP</h1>
-<p>Please edit asset/config/admin.php</p>
+//	...
+$h1 = '<h1>The Admin IP has not been set.</h1>'.PHP_EOL;
+$p  = '<p>Please edit this config file: <code>asset/config/admin.php</code></p>'.PHP_EOL;
+
+//	...
+echo OP()->isShell() ? strip_tags($h1) : $h1;
+echo OP()->isShell() ? strip_tags($p)  : $p;
