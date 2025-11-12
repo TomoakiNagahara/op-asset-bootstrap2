@@ -30,6 +30,12 @@ OP()->Unit()->WebPack()->Auto('asset:/webpack/css/p.css');
 ?>
 <html>
 	<head>
+		<!-- Stylesheet -->
+		<link type="text/css" href="https://2030.onepiece-framework.com/webpack/css/Translate.css" rel="stylesheet">
+
+		<!-- JavaScript -->
+		<script type="text/javascript" src="https://2030.onepiece-framework.com/webpack/js/Translate.js" defer></script>
+
 	<!-- Style -->
 	<style><?php OP()->Unit()->WebPack()->Output('css') ?></style>
 
@@ -39,6 +45,7 @@ OP()->Unit()->WebPack()->Auto('asset:/webpack/css/p.css');
 	<body>
 		<header></header>
 		<main>
+			<div data-translation="true">
 			<?php
 			if( file_exists($path) ){
 				include($path);
@@ -46,7 +53,12 @@ OP()->Unit()->WebPack()->Auto('asset:/webpack/css/p.css');
 				echo "This file was not found: {$path}";
 			}
 			?>
+			</div>
 		</main>
+		<aside style="margin: 0 1em;">
+			<hr/>
+			<div id="op-translate-language-area"></div>
+		</aside>
 		<footer></footer>
 	</body>
 </html>
