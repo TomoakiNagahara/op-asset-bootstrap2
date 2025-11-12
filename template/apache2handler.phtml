@@ -22,16 +22,16 @@ $rewrite_base = $rewrite_base ? "/{$rewrite_base }/": '/';
 ?>
 <h1>Bootstrap: <?= PHP_SAPI ?></h1>
 <ol>
-	<li>Change directory: <code><?= OP()->Path('app:/') ?></code></li>
+	<li>Move to following directory: <code><?= OP()->Path('app:/') ?></code></li>
 	<li>Open .htaccess: <code>vim .htaccess</code></li>
 	<li>
-		Edit .htaccess
+		Edit .htaccess:
 		<ol>
-			<li>Change <code>RewriteEngine</code>: <code>On</code> from <code>Off</code>.</li>
+			<li>Change of <code>RewriteEngine</code>: <code>Off</code> --&gt; <code>On</code>.</li>
 			<?php if( $rewrite_base !== '/' ): ?>
-			<li>Change <code>RewriteBase</code>: <code><?= $rewrite_base ?></code></li>
+			<li>Change of <code>RewriteBase</code>: <code>/</code> --&gt; <code><?= $rewrite_base ?></code></li>
 			<?php endif; ?>
 		</ol>
 	</li>
-	<li>Reload this page.</li>
+	<li>Please reload this page.</li>
 </ol>
