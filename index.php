@@ -22,6 +22,7 @@ try {
 		'config/php.php',
 		'bootstrap/include/php.php',
 		'bootstrap/include/root.php',
+		'bootstrap/include/appid.php',
 		'bootstrap/include/admin.php',
 		'bootstrap/include/rewrite.php',
 		'bootstrap/include/session.php',
