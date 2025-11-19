@@ -1,0 +1,34 @@
+<?php
+/**	op-asset-bootstrap2:/template/appid.phtml
+ *
+ * @created    2025-07-09
+ * @version    1.0
+ * @package    op-asset-bootstrap2
+ * @author     Tomoaki Nagahara
+ * @copyright  Tomoaki Nagahara All right reserved.
+ */
+
+/**	namespace
+ *
+ */
+namespace OP;
+
+//	...
+$h1 = '<h1>The AppID has not been initialized.</h1>'.PHP_EOL;
+$p1 = '<p>Please edit this config file: <code>asset/config/app_id.php</code></p>'.PHP_EOL;
+$p2 = '<p>Please assign a long long string to <code>$seed</code>.</p>'.PHP_EOL;
+$p3 = 'Example: <code>$seed = \'This is very very long long string です！\'</code>'.PHP_EOL;
+/* @var $e \Exception */
+if( isset($e) ){
+	$message = $e->getMessage();
+	$p4 = "<p style='color:red;'>ERROR: {$message}</p>";
+}
+
+//	...
+echo OP()->isShell() ? strip_tags($h1) : $h1;
+echo OP()->isShell() ? strip_tags($p1) : $p1;
+echo OP()->isShell() ? strip_tags($p2) : $p2;
+echo OP()->isShell() ? strip_tags($p3) : $p3;
+if( $p4 ?? null ){
+	echo OP()->isShell() ? strip_tags($p4) : $p4;
+}
