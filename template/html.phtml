@@ -5,7 +5,7 @@
  * @version    1.0
  * @package    op-asset-bootstrap2
  * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @copyright  Tomoaki Nagahara All rights reserved.
  */
 
 /**	namespace
@@ -41,6 +41,21 @@ OP()->Unit()->WebPack()->Auto('asset:/webpack/css/p.css');
 
 	<!-- Title -->
 	<title>ONEPIECE Framework</title>
+
+	<style>
+	a {
+		color: var(--color-a-text);
+	}
+	:root {
+		--color-a-text: hsl( 210, 80%, 50%);
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+		--color-a-text: hsl( 210, 80%, 80%);
+		}
+	}
+	</style>
+
 	</head>
 	<body>
 		<header></header>
