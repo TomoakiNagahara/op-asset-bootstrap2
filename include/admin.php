@@ -15,7 +15,12 @@ namespace OP;
 
 //	...
 if( OP::isCI() ){
-//	return;
+	$config = OP()->Config('admin');
+	if( empty($config[OP::_ADMIN_IP_])   ){ $config[OP::_ADMIN_IP_]   = '127.0.0.1'; }
+	if( empty($config[OP::_ADMIN_MAIL_]) ){ $config[OP::_ADMIN_MAIL_] = 'root@localhost'; }
+	if( empty($config[OP::_ADMIN_FROM_]) ){ $config[OP::_ADMIN_FROM_] = 'root@localhost'; }
+	OP()->Config('admin', $config);
+	return;
 }
 
 //	...
