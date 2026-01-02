@@ -58,6 +58,12 @@ try {
 	//	Displays an error message.
 	echo 'Bootstrap: ' . $e->getMessage();
 
+	//	Display trace.
+	$path  = realpath(__DIR__.'/../..').'/';
+	$trace = $e->getTraceAsString();
+	$trace = str_replace($path, '', $trace);
+	echo "<pre>{$trace}</pre>";
+
 	//	...
 	exit(__LINE__);
 }
