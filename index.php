@@ -52,6 +52,12 @@ try {
 	unset($file);
 
 } catch ( \Throwable $e ){
+	//	Server errors can be detected by status monitoring.
+	http_response_code(500);
+
+	//	Displays an error message.
 	echo 'Bootstrap: ' . $e->getMessage();
+
+	//	...
 	exit(__LINE__);
 }
