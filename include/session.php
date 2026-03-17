@@ -28,10 +28,30 @@ if( session_id() ){
 /**	Start the session.
  *
  */
-if(!session_start() ){
-	//	Could not start the session.
-	$line = __LINE__;
-	$file = __FILE__;
-	echo "{$file} #{$line} - Session start failed.\n";
-	exit($line);
+if( session_start() ){
+	//	No problem!
+	return;
 }
+
+/**	Switch by the session save handler.
+ *
+ */
+switch( ini_get('session.save_handler') ){
+	case 'memcached':
+		//	Check if the memcached extension is loaded.
+		if(!extension_loaded('memcached') ){
+			$message = 'The memcached extension is not loaded.';
+		}
+	break;
+
+	default:
+		$message = 'Could not start the session.';
+}
+
+/**	Default error message.
+ *
+ */
+$line = __LINE__;
+$file = __FILE__;
+echo "{$file} #{$line} - {$message}".PHP_EOL;
+exit(__LINE__);
