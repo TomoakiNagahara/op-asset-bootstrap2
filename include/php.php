@@ -14,7 +14,13 @@
 namespace OP;
 
 //	Check if extension loaded.
-foreach(['apcu','mbstring','openssl'] as $name ){
+foreach([
+	/*
+	'apcu',
+	*/
+	'mbstring',
+	'openssl',
+] as $name ){
 	//	...
 	if(!extension_loaded( $name ) ){
 		exit("\nThis extension is not loaded: {$name}\n\n");
