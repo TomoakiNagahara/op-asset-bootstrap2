@@ -3,10 +3,9 @@
  *
  * @genesis    2016-11-26  skeleton:/app/init.php
  * @rebirth    2025-06-10  op-asset-bootstrap2:/index.php
- * @version    1.0
+ * @license    Apache-2.0
  * @package    op-asset-bootstrap2
- * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @copyright  Tomoaki Nagahara
  */
 
 //	...
