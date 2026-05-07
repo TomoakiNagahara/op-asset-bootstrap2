@@ -17,6 +17,7 @@ namespace OP;
 //	...
 require_once(_ROOT_CORE_.'/function/RootPath.php');
 RootPath('real' , realpath(_ROOT_GIT_) );
+RootPath('op'   , _ROOT_OP_   );
 RootPath('git'  , _ROOT_GIT_  );
 RootPath('doc'  , _ROOT_DOC_  );
 RootPath('app'  , _ROOT_APP_  );
