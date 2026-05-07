@@ -33,9 +33,9 @@ try {
 		//	Include file into closure.
 		if(!file_exists($file) ){
 			//	...
-			if( defined('_ROOT_GIT_') ){
+			if( defined('_ROOT_OP_') ){
 				//	...
-				$file = str_replace(_ROOT_GIT_, 'git:/', $file);
+				$file = str_replace(_ROOT_OP_, 'OP:/', $file);
 			}
 			//	...
 			throw new \Exception("`{$file}` is not found.");
